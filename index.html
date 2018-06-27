@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | tank_cblpok</title>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/HTML.json");
+	  
+		var params = {
+    backgroundcolor: "A0A0A0",
+    bordercolor: "000000",
+    textcolor: "FFFFFF",
+    logoimage: "MyLogo.png",
+    progressbarimage: "MyProgressBar.png",
+    progressframeimage: "MyProgressFrame.png"
+	};
+	var u = UnityObject2({ params: params });
+	u.initPlugin(jQuery("#unityPlayer")[0], "Example.unity3d");
+
+    </script>
+  </head>
+  <body>
+    <div id="gameContainer" style="width: 320px; height: 180px; margin: auto"></div>
+  </body>
+</html>
