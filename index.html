@@ -1,0 +1,117 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+  <title>Игрок: Сырок</title>
+
+  <!-- Plugins -->
+    <!-- Preloader -->
+    <script src="plugins/pace.js/pace.min.js"></script>
+    <link rel="stylesheet" href="plugins/pace.js/pace-theme-minimal.css">
+    <!-- Jquery -->
+    <script src="plugins/jquery/jquery-3.3.1.min.js"></script>
+
+  <!-- misc -->
+  <meta charset="utf-8">
+  <link rel="manifest" href="manifest.json">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- icons -->
+  <link rel="shortcut icon" href="img/icon/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="push.js"></script>
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/rankStyle.css">
+  <link rel="stylesheet" href="css/text.css">
+  <link rel="stylesheet" href="css/elements.css">
+  <link rel="stylesheet" href="css/main.css">
+
+
+  <style>nav {
+    width: 100%;
+    margin-top: 100px;
+    background-color: #4679bd;
+    color: #fff;
+  }
+  nav.fixed {
+    position: fixed;
+    top: -100px;
+  }
+  nav .spreads {
+    display: block;
+    float: left;
+    width: 1px;
+    height: 200px;
+    margin-left: -1px;
+    margin-right: -4px;
+    transition: height 0.1s linear;
+  }
+  nav::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+  nav li {
+    float: left;
+    padding: 15px;
+  }</style>
+</head>
+
+<body style="background-color: #0f0f0f">
+
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <div class="center-content">
+    <div class="iframe-block">
+      <!-- <iframe rel="contents" src="iframe/tank/index.html" name="mytank" scrolling="auto"></iframe> -->
+    </div>
+
+    <p id="va">text</p>
+    <p id="sd">lol2</p>
+    <div id="rankbox"><div id="hidden"></div><iframe src="http://ratings.tankionline.com/ru/user/CblP0K/" id="rankframe" scrolling="no">></iframe></div>
+    <p class="azure lol">Hello world! This is HTML5 Boilerplate.</p>
+    <a href="#"  onclick="SendPushMe();return false">Вызвать SendPushMe</a>
+  </div>
+
+
+
+  <nav>
+    <i class="spreads"></i>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </nav>
+
+
+  <div style="height: 2000px"></div>
+
+
+
+  <script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
+  <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>
