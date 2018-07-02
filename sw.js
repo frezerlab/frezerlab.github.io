@@ -20,7 +20,7 @@ self.addEventListener('push', function (event) {
 
         var title = data.notification.title;
         var body = data.notification.body;
-        var icon = 'https://mysite.ru/my_beautiful_push_icon.png';
+        var icon = 'https://frezerlab.github.io/img/icon/favicon.png';
 
         return self.registration.showNotification(title, {
           body: body,
