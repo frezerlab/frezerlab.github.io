@@ -21,9 +21,10 @@
  */
 
 ::selection {
-    background: #ffffff;
-    color: #212121;
-    text-shadow: black;
+  background: #7a7a7a;
+  color: #000000;
+  text-shadow: black;
+  font-weight: 400;
 }
 
 /*

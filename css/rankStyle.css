@@ -1,10 +1,3 @@
-#hidden{
-  background-color: #0f0f0f;
-  position: relative;
-  width: 2%;
-  height: 100%;
-  left: 96%;
-}
 
 #rankbox{
   width: 1008px;
@@ -13,7 +6,7 @@
   position: sticky;
   background-color: #ff000000;
   border-radius: 5px;
-  margin-left: auto;
+  margin-left: -2px;
   margin-right: auto;
 }
 
@@ -25,4 +18,41 @@
   width : 100%;
   height : 1100px;
   z-index: -1;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* вывыв */
+.outer {
+  display: block;
+  left: 90.1%;
+  border-width: 1px 0;
+  position: relative;
+  background-color: #ffffff;
+}
+.outer::after, .outer::before {
+  content:'';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 20px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 50%;
+  z-index: 1;
+}
+.outer::after {
+  bottom: -57px;
+  clip: rect(auto, auto, 40px, 40px);
+  transform: rotate(90deg);
+  border-radius: 24px;
+}
+.outer::before {
+  top: -20px;
+  clip: rect(40px, auto, auto, 40px);
+  transform: rotate(-90deg);
+  border-radius: 24px;
+}
+
+
+
+

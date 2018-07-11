@@ -1,7 +1,12 @@
 
-/* text style */
-.azure{
-  color: #f3f3f3;
-  font-weight: 100;
+.user_name{
+  display: inline;
+  margin-right: 20px;
+  margin-left: 7px;
+  margin-bottom: 10px;
 }
 
+.rankup-date{
+  display: block;
+  margin-bottom: -30%;
+}
