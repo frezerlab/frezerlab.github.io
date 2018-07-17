@@ -10,3 +10,13 @@
   display: block;
   margin-bottom: -30%;
 }
+
+.score-value{
+  text-align: center;
+  margin-bottom: -22px;
+  margin-top: -10px;
+}
+
+.count-photo{
+  float: right;
+}

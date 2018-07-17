@@ -18,3 +18,16 @@
   line-height: 48px;
   margin: 0 -20px 0 0;
 }
+
+.preview-photo{
+  transform: scale(1.2);
+}
+
+.preview-screenshot{
+  transform: scale(1.5);
+}
+
+.preview-screenshot-container{
+  width: 200px;
+  height: 136px;
+}

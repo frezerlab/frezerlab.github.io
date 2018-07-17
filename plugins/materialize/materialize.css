@@ -4867,10 +4867,6 @@ small {
   display: block;
   border-radius: 2px 2px 0 0;
   position: relative;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
   width: 100%;
 }
 
@@ -5754,7 +5750,8 @@ body.keyboard-focused .dropdown-content li:focus {
   right: 0;
   background-color: #fafafa;
   padding: 0;
-  max-height: 70%;
+  max-height: 97%;
+  min-height: 12px;
   width: 55%;
   margin: auto;
   overflow-y: auto;
