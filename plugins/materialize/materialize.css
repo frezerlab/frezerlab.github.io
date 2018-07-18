@@ -5752,11 +5752,16 @@ body.keyboard-focused .dropdown-content li:focus {
   padding: 0;
   max-height: 97%;
   min-height: 12px;
-  width: 55%;
+  width: auto;
+  max-width: 80%;
   margin: auto;
   overflow-y: auto;
   border-radius: 2px;
   will-change: top, opacity;
+}
+
+.modal-screnshots-full{
+  width: auto;
 }
 
 .modal:focus {

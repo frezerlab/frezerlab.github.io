@@ -35,7 +35,7 @@
 .panel-comment-screenshot{
   overflow-y: scroll;
   overflow-x: hidden;
-  width: 300px;
+  width: auto;
   height: 81%;
   position: absolute;
   top: 0px;
