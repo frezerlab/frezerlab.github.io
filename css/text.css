@@ -20,3 +20,9 @@
 .count-photo{
   float: right;
 }
+
+.date-screenshot{
+  float: left;
+  display: inline-block;
+  padding-left: 24px;
+}
