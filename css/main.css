@@ -1,0 +1,19 @@
+
+.logo_frezerlab{
+  width: 200px;
+  height: 60px;
+  margin-left: 12px;
+}
+
+.language-picker{
+  width: 30px;
+}
+
+.bg-color-anim{
+  -webkit-transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.clr-btn{
+  margin-bottom: 10px;
+}

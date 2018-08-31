@@ -1,0 +1,22 @@
+.flask{
+  width: 300px;
+  height: 300px;
+}
+.frame1{
+  background-image: url("../img/FlaskAnim/0.png");
+}
+.frame2{
+  background-image: url("../img/FlaskAnim/1.png");
+}
+.frame3{
+  background-image: url("../img/FlaskAnim/2.png");
+}
+.frame4{
+  background-image: url("../img/FlaskAnim/3.png");
+}
+.frame5{
+  background-image: url("../img/FlaskAnim/4.png");
+}
+.frame6{
+  background-image: url("../img/FlaskAnim/5.png");
+}

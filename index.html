@@ -1,0 +1,108 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Frezer lab</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" href="img/icons/favicon.png">
+  <link rel="shortcut icon" href="img/icons/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/materialize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/flaskAnim.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/flag-icon.css">
+
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+
+<!--
+  <div class="flask frame1" id="flask"></div>
+-->
+
+  <nav>
+    <div class="nav-wrapper bg-color-anim" data-color="color">
+      <a href="#" class="brand-logo"><object class="logo_frezerlab" type="image/svg+xml" data="img/icons/logo_frezerlab.svg"></object></a>
+      <ul id="nav-mobile" class="right">
+        <li><a class="black-text hide-on-med-and-down" href="sass.html">Sass</a></li>
+        <li><a class="black-text hide-on-med-and-down" href="badges.html">Components</a></li>
+        <li><a class='dropdown-trigger' href='#' data-target='dropdown1'>d</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="hide-on-large-only">
+  <ul id="tabs-swipe-demo" class="tabs bg-color-anim" data-color="color">
+    <li class="tab col s3"><a class="black-text" href="#test-swipe-1">Test 1</a></li>
+    <li class="tab col s3"><a class="black-text active" href="#test-swipe-2">Test 2</a></li>
+    <li class="tab col s3"><a class="black-text" href="#test-swipe-3">Test 3</a></li>
+  </ul>
+  <div id="test-swipe-1" class="col s12 blue">Test 1</div>
+  <div id="test-swipe-2" class="col s12 red">Test 2</div>
+  <div id="test-swipe-3" class="col s12 green">Test 3</div>
+  </div>
+
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li class="bg-color-anim lighten-3" data-color="color"><a href="/ru/"><img class="language-picker z-depth-2" src="img/flags/4x3/ru.svg"></a></li>
+    <li class="divider bg-color-anim" tabindex="-1" data-color="color"></li>
+    <li class="bg-color-anim lighten-3" data-color="color"><a href="#!"><img class="language-picker z-depth-2" src="img/flags/4x3/us.svg"></a></li>
+  </ul>
+
+
+
+  <!-- Opens the color bar -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large waves-effect modal-trigger" href="#color-palette" data-color="color"><i class="material-icons">brush</i></a>
+  </div>
+  <!-- Color panel -->
+  <div id="color-palette" class="modal modal-fixed-footer lighten-3 bg-color-anim" data-color="color">
+    <div class="modal-content">
+      <h4>Выберите цвет</h4>
+      <div class="divider bg-color-anim" tabindex="-1" data-color="color"></div>
+      <br>
+      <div class="row">
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large red clr-btn" data-color="red"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large pink clr-btn" data-color="pink"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large purple clr-btn" data-color="purple"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large deep-purple clr-btn" data-color="deep-purple"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large indigo clr-btn" data-color="indigo"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large blue clr-btn" data-color="blue"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large light-blue clr-btn" data-color="light-blue"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large cyan clr-btn" data-color="cyan"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large teal clr-btn" data-color="teal"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large green clr-btn" data-color="green"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large light-green clr-btn" data-color="light-green"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large lime clr-btn" data-color="lime"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large yellow clr-btn" data-color="yellow"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large amber clr-btn" data-color="amber"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large orange clr-btn" data-color="orange"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large deep-orange clr-btn" data-color="deep-orange"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large brown clr-btn" data-color="brown"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large grey clr-btn" data-color="grey"></a></div>
+        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large blue-grey clr-btn" data-color="blue-grey"></a></div>
+      </div>
+    </div>
+    <div class="modal-footer lighten-3 bg-color-anim" data-color="color">
+      <a href="#!" class="modal-close waves-effect btn-flat" data-color="waves-color">Закрыть</a>
+    </div>
+  </div>
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/InitializationMaterialize.js"></script>
+  <script src="js/SelectColor.js"></script>
+  <script src="js/languages.js"></script>
+  <script src="js/flaskAnim.js"></script>
+</body>
+
+</html>
