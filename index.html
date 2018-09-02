@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/flaskAnim.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="css/flag-icon.css">
 
 </head>
 
@@ -29,35 +28,68 @@
 -->
 
   <nav>
-    <div class="nav-wrapper bg-color-anim" data-color="color">
+    <div class="nav-wrapper bg-color-anim " data-color="color">
       <a href="#" class="brand-logo"><object class="logo_frezerlab" type="image/svg+xml" data="img/icons/logo_frezerlab.svg"></object></a>
       <ul id="nav-mobile" class="right">
         <li><a class="black-text hide-on-med-and-down" href="sass.html">Sass</a></li>
         <li><a class="black-text hide-on-med-and-down" href="badges.html">Components</a></li>
-        <li><a class='dropdown-trigger' href='#' data-target='dropdown1'>d</a></li>
       </ul>
     </div>
   </nav>
   <div class="hide-on-large-only">
   <ul id="tabs-swipe-demo" class="tabs bg-color-anim" data-color="color">
-    <li class="tab col s3"><a class="black-text" href="#test-swipe-1">Test 1</a></li>
-    <li class="tab col s3"><a class="black-text active" href="#test-swipe-2">Test 2</a></li>
+    <li class="tab col s3"><a class="black-text" href="#test-swipe-1">Главная</a></li>
+    <li class="tab col s3"><a class="black-text" href="#test-swipe-2">Test 2</a></li>
     <li class="tab col s3"><a class="black-text" href="#test-swipe-3">Test 3</a></li>
   </ul>
-  <div id="test-swipe-1" class="col s12 blue">Test 1</div>
-  <div id="test-swipe-2" class="col s12 red">Test 2</div>
-  <div id="test-swipe-3" class="col s12 green">Test 3</div>
+  <div id="test-swipe-1" class="col s12">
+    <div class="container">
+
+      <div class="row">
+        <div class="col s12">
+          <div class="bg-color-anim card-panel" data-color="color">
+        <span class="black-text">I am a very simple card. I am good at containing small bits of information.
+        I am convenient because I require flittle markup to use effectively. I am similar to what is called a panel in other frameworks.
+        </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="test-swipe-2" class="col s12">Test 2</div>
+  <div id="test-swipe-3" class="col s12">Test 3</div>
   </div>
 
 
-  <!-- Dropdown Structure -->
-  <ul id='dropdown1' class='dropdown-content'>
-    <li class="bg-color-anim lighten-3" data-color="color"><a href="/ru/"><img class="language-picker z-depth-2" src="img/flags/4x3/ru.svg"></a></li>
-    <li class="divider bg-color-anim" tabindex="-1" data-color="color"></li>
-    <li class="bg-color-anim lighten-3" data-color="color"><a href="#!"><img class="language-picker z-depth-2" src="img/flags/4x3/us.svg"></a></li>
-  </ul>
 
-
+<div class="hide-on-med-and-down">
+  <div class="carousel carousel-slider center">
+    <div class="carousel-item red white-text inset-shadow" href="#one!">
+      <h2>First Panel</h2>
+      <p class="white-text">This is your first panel</p>
+      <div class="carousel-fixed-item center">
+        <a class="btn waves-effect black-text" data-color="color">Подробнее</a>
+      </div>
+    </div>
+    <div class="carousel-item amber white-text inset-shadow" href="#two!">
+      <h2>Second Panel</h2>
+      <p class="white-text">This is your second panel</p>
+    </div>
+    <div class="carousel-item green white-text inset-shadow" href="#three!">
+      <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p>
+    </div>
+    <div class="carousel-item blue white-text inset-shadow" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+    <div class="carousel-item blue white-text inset-shadow" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+  </div>
+  </div>
 
   <!-- Opens the color bar -->
   <div class="fixed-action-btn">
@@ -96,6 +128,7 @@
     </div>
   </div>
 
+ <!-- <div style="height: 2000px;"></div> -->
 
   <script src="js/jquery.js"></script>
   <script src="js/materialize.js"></script>
