@@ -1,23 +1,34 @@
 
-//Initialization Navbar
+
 $(document).ready(function(){
+
+  //Initialization Navbar
   $('.sidenav').sidenav();
-});
 
-//Initialization Modals
-$(document).ready(function(){
+  //Initialization Modals
   $('.modal').modal();
-});
 
-//Initialization Dropdown
-$('.dropdown-trigger').dropdown();
+  //Initialization Carousel
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
 
-//Initialization Tabs
-$(document).ready(function(){
+  //Initialization Dropdown
+  $('.dropdown-trigger').dropdown();
+
+  //Initialization Tabs
   $('.tabs').tabs({
     swipeable : true
   });
-$('.carousel-slider').css("height", "");
-});
+  $('.carousel-slider').css("height", "");
 
+  //Initialization Collapsible
+  $('.collapsible').collapsible();
+
+
+
+
+
+});
 

@@ -17,3 +17,14 @@
 .clr-btn{
   margin-bottom: 10px;
 }
+
+.inset-shadow{
+  box-shadow: inset 0px 3px 3px rgba(0,0,0,0.3)
+}
+
+.bg-title-card{
+  padding-left: 12px;
+  padding-right: 12px;
+  border-top-right-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
