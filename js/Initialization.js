@@ -1,7 +1,9 @@
 
-
 $(document).ready(function(){
+  Initialization();
+});
 
+function Initialization(){
   //Initialization Navbar
   $('.sidenav').sidenav();
 
@@ -21,14 +23,17 @@ $(document).ready(function(){
   $('.tabs').tabs({
     swipeable : true
   });
+
   $('.carousel-slider').css("height", "");
 
   //Initialization Collapsible
   $('.collapsible').collapsible();
 
+}
 
-
-
-
-});
+setInterval( function(){
+  $('.scroll-viewport').nanoScroller({
+   alwaysVisible: true
+  });
+}, 10);
 

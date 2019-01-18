@@ -15,9 +15,12 @@
   <link rel="stylesheet" href="css/flaskAnim.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+
 </head>
 
 <body class="lighten-5" data-color="color">
+<div  class="scroll-viewport">
+  <div class="nano-content">
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -30,7 +33,7 @@
 
 
   <!-- Only mobile -->
-  <div class="hide-on-large-only">
+  <div data-version="mobile" class="hide-on-large-only">
     <nav>
       <div class="nav-wrapper bg-color-anim" data-color="color">
         <a href="/" class="brand-logo"><div class="logo_frezerlab"><?xml version="1.0" encoding="utf-8"?>
@@ -82,26 +85,21 @@
 </svg>
         </div></a>
         <ul id="nav-mobile" class="right">
-          <li><a data-color="txt-colorbg" class="hide-on-med-and-down" href="/">Главная</a></li>
-          <li><a data-color="txt-colorbg" class="hide-on-med-and-down" href="badges.html">О компании</a></li>
-          <li><a data-color="txt-colorbg" class="hide-on-med-and-down" href="badges.html">Проекты</a></li>
-          <li><a data-color="txt-colorbg" class="hide-on-med-and-down" href="badges.html">Услуги</a></li>
-          <li><a data-color="txt-colorbg" class="hide-on-med-and-down" href="badges.html">Game Club</a></li>
         </ul>
       </div>
     </nav>
 
   <ul id="tabs-swipe-demo" class="tabs bg-color-anim" data-color="color">
-    <li class="tab col s4"><a class="black-text" href="#main-page">Главная</a></li>
-    <li class="tab col s4"><a class="black-text" href="#test-swipe-2">Test 2</a></li>
-    <li class="tab col s4"><a class="black-text" href="#test-swipe-3">Test 3</a></li>
+    <li class="tab col s4"><a class="" data-color="txt-colorbg" href="#main-page">Главная</a></li>
+    <li class="tab col s4"><a class="" data-color="txt-colorbg" href="#test-swipe-2">Test 2</a></li>
+    <li class="tab col s4"><a class="" data-color="txt-colorbg" href="#test-swipe-3">Test 3</a></li>
   </ul>
   <div id="main-page" class="col s12">
     <div class="container">
 
       <div class="row">
         <div class="col s6">
-          <div class="card lighten-2" data-color="color">
+          <div class="card lighten-2 bg-color-anim" data-color="color">
             <div class="card-image">
               <img src="https://materializecss.com/images/sample-1.jpg">
               <span class="card-title bg-title-card">Flappy Navalny</span>
@@ -112,7 +110,7 @@
           </div>
         </div>
         <div class="col s6">
-          <div class="card lighten-2" data-color="color">
+          <div class="card lighten-2 bg-color-anim" data-color="color">
             <div class="card-image">
               <img src="https://materializecss.com/images/sample-1.jpg">
               <span class="card-title bg-title-card">Flappy Navalny</span>
@@ -140,7 +138,7 @@
   </div>
 
   <!-- Only desktop -->
- <div class="hide-on-med-and-down">
+  <div data-version="desktop" class="hide-on-med-and-down">
     <nav>
       <div class="nav-wrapper bg-color-anim z-depth-2" data-color="color">
         <a href="/" class="brand-logo"><div class="logo_frezerlab"><?xml version="1.0" encoding="utf-8"?>
@@ -230,35 +228,81 @@
   <br>
   <br>
 
+
+
+
+
+
+
   <div class="divider bg-color-anim container" tabindex="-1" data-color="color"></div>
   <br>
   <div class="container">
   <div class="row">
-    <div class="col s4">
+    <div class="col m4">
       <div class="center promo promo-example">
         <i class="material-icons large">videogame_asset</i>
         <p class="promo-caption">Создаём интересные игры!</p>
-        <p class="light center">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components.</p>
+        <p class="light center"></p>
       </div>
     </div>
-    <div class="col s4">
+    <div class="col m4">
       <div class="center promo promo-example">
         <i class="material-icons large">people</i>
         <p class="promo-caption">Весёлое и дружное сообщество!</p>
-        <p class="light center">By utilizing elements and principles of Material Design, we were able to create a framework that focuses on User Experience.</p>
+        <p class="light center"></p>
       </div>
     </div>
-    <div class="col s4">
+    <div class="col m4">
       <div class="center promo promo-example">
         <i class="material-icons large">person_add</i>
-        <p class="promo-caption">Присоединяйся!</p>
-        <p class="light center">Мы всегда рады новым лицам в нашей команде!</p>
+        <p class="promo-caption">Присоединяйся! Мы всегда рады новым лицам в нашей команде!</p>
+        <p class="light center"></p>
       </div>
     </div>
   </div>
   </div>
 
+  <div style="height: 1000px;"></div>
 
+  <footer class="page-footer bg-color-anim" data-color="color">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 data-color="txt-colorbg">Footer Content</h5>
+          <ul>
+            <li><p class="text-lighten-4" data-color="txt-colorbg">You can use rows and columns here to organize your footer content.</p></li>
+            <li><br></li>
+            <li><br></li>
+            <li><a data-version="desktop" class="text-lighten-4 underline-link hide-on-med-and-down" data-color="txt-colorbg" href="#mobile">Мобильная версия</a></li>
+            <li><a data-version="mobile" class="text-lighten-4 underline-link hide-on-large-only" data-color="txt-colorbg" href="#desktop">Версия для ПК</a></li>
+          </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 data-color="txt-colorbg">Links</h5>
+          <ul>
+            <li><a class="text-lighten-3" data-color="txt-colorbg" href="#!">Link 1</a></li>
+            <li><a class="text-lighten-3" data-color="txt-colorbg" href="#!">Link 2</a></li>
+            <li><a class="text-lighten-3" data-color="txt-colorbg" href="#!">Link 3</a></li>
+            <li><a class="text-lighten-3" data-color="txt-colorbg" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright z-depth-2">
+      <div class="container" data-color="txt-colorbg">
+        © 2014 Copyright Text
+      </div>
+    </div>
+  </footer>
+
+
+  </div>
+  <div class="nano-pane bg-color-anim lighten-3" data-color="color">
+    <div class="nano-slider bg-color-anim darken-2" data-color="color"></div>
+  </div>
+</div>
+
+    <!-- MISC -->
   <!-- Opens the color bar -->
   <div class="fixed-action-btn">
     <a class="btn-floating btn-large waves-effect modal-trigger" href="#color-palette" data-color="color"><i data-color="txt-colorbg" class="material-icons">brush</i></a>
@@ -296,13 +340,15 @@
     </div>
   </div>
 
-  <div style="height: 2000px;"></div>
 
-  <script src="js/jquery.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/InitializationMaterialize.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/nanoScroller.js"></script>
+  <script src="js/Initialization.js"></script>
   <script src="js/SelectColor.js"></script>
+  <script src="js/main.js"></script>
   <script src="js/languages.js"></script>
+
 </body>
 
 </html>

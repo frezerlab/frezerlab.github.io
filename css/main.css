@@ -1,3 +1,6 @@
+body{
+  overflow: hidden;
+}
 
 .logo_frezerlab{
   width: 200px;
@@ -10,8 +13,8 @@
 }
 
 .bg-color-anim{
-  -webkit-transition: background-color 0.4s ease-in-out;
-  transition: background-color 0.4s ease-in-out;
+  -webkit-transition: background-color 0.4s ease-in-out !important;
+  transition: background-color 0.4s ease-in-out !important;
 }
 
 .clr-btn{
@@ -28,3 +31,55 @@
   border-top-right-radius: 4px;
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+.underline-link:hover{
+  text-decoration: underline;
+}
+
+/*********************
+    ScrollBar Style
+***********************/
+.scroll-viewport > .nano-content::-webkit-scrollbar {
+  display: none;
+}
+.has-scrollbar > .nano-content::-webkit-scrollbar {
+  display: block;
+}
+
+.scroll-viewport > .nano-content {
+  bottom: 0;
+  left: 0;
+  overflow: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.scroll-viewport > .nano-pane {
+  position: absolute;
+  z-index: 1;
+  width: 10px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  visibility: hidden\9; /* Target only IE7 and IE8 with this hack */
+  opacity: .01;
+  -webkit-transition: .2s;
+  -moz-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+.scroll-viewport > .nano-pane > .nano-slider {
+  position: relative;
+}
+.scroll-viewport:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
+  visibility: visible\9; /* Target only IE7 and IE8 with this hack */
+  opacity: 0.99;
+}
+
+.scroll-viewport {
+
+}
+
+

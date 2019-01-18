@@ -48,6 +48,7 @@ function ReplaceColor(color){
   $('*[data-color="color"]').addClass(color).removeClass(lastColor);
   $('*[data-color="waves-color"]').removeClass("waves-" + lastColor).addClass("waves-" + color);
   $('*[name="theme-color"]').attr('content', HexColor[color]);
+  $('body').css({'background-color':'red !important'});
   if(color == "brown" || color == "grey" || color == "blue-grey" || color == "black"){
     $('*[data-color="txt-colorbg"]').addClass('white-text').removeClass('black-text');
   }else{

@@ -19,26 +19,47 @@ var env, floor, dragon, pepperBottle,
   fireRate = 0,
   maxSneezingRate = 8,
   sneezeDelay = 500,
-  colorMat = {
-        "0": 0xf44336,
-        "1": 0xe91e63,
-        "2": 0x9c27b0,
-        "3": 0x673ab7,
-        "4": 0x3f51b5,
-        "5": 0x2196f3,
-        "6": 0x03a9f4,
-        "7": 0x00bcd4,
-        "8": 0x009688,
-        "9": 0x4caf50,
-        "10": 0x8bc34a,
-        "11": 0xcddc39,
-        "12": 0xffeb3b,
-        "13": 0xffc107,
-        "14": 0xff9800,
-        "15": 0xff5722,
-        "16": 0x795548,
-        "17": 0x9e9e9e,
-        "18": 0x607d8b
+  colorMatBody = {
+    "0": 0xf44336,
+    "1": 0xe91e63,
+    "2": 0x9c27b0,
+    "3": 0x673ab7,
+    "4": 0x3f51b5,
+    "5": 0x2196f3,
+    "6": 0x03a9f4,
+    "7": 0x00bcd4,
+    "8": 0x009688,
+    "9": 0x4caf50,
+    "10": 0x8bc34a,
+    "11": 0xcddc39,
+    "12": 0xffeb3b,
+    "13": 0xffc107,
+    "14": 0xff9800,
+    "15": 0xff5722,
+    "16": 0x795548,
+    "17": 0x9e9e9e,
+    "18": 0x607d8b
+  },
+  colorMatCheek = {
+    "0": 0xef5350,
+    "1": 0xec407a,
+    "2": 0xeab47bc,
+    "3": 0xab47bc,
+    "4": 0x5c6bc0,
+    "5": 0x42a5f5,
+    "6": 0x29b6f6,
+    "7": 0x26c6da,
+    "8": 0x26a69a,
+    "9": 0x66bb6a,
+    "10": 0x9ccc65,
+    "11": 0xd4e157,
+    "12": 0xffee58,
+    "13": 0xffca28,
+    "14": 0xffa726,
+    "15": 0xff7043,
+    "16": 0x8d6e63,
+    "17": 0xbdbdbd,
+    "18": 0x78909c
   },
   awaitingSmokeParticles = [],
   timeSmoke = 0,
@@ -171,13 +192,15 @@ Dragon = function() {
 
   this.threegroup = new THREE.Group(); // this is a sort of container that will hold all the meshes and will be added to the scene;
 
+  colorID = getRandomInt(0, 18);
+
   // Materials
-  var greenMat = new THREE.MeshLambertMaterial({
-    color: colorMat[getRandomInt(0, 18)],
+  var BodyMat = new THREE.MeshLambertMaterial({
+    color: colorMatBody[colorID],
     shading: THREE.FlatShading
   });
-  var lightGreenMat = new THREE.MeshLambertMaterial({
-    color: 0x95c088,
+  var cheekMat = new THREE.MeshLambertMaterial({
+    color: colorMatCheek[colorID],
     shading: THREE.FlatShading
   });
 
@@ -212,7 +235,7 @@ Dragon = function() {
 
   // body
   this.body = new THREE.Group();
-  this.belly = makeCube(greenMat, 30, 30, 40, 0, 0, 0, 0, 0, Math.PI / 4);
+  this.belly = makeCube(BodyMat, 30, 30, 40, 0, 0, 0, 0, 0, Math.PI / 4);
 
   // Wings
   this.wingL = makeCube(yellowMat, 5, 30, 20, 15, 15, 0, -Math.PI / 4, 0, -Math.PI / 4);
@@ -223,7 +246,7 @@ Dragon = function() {
 
   // pike body
   var pikeBodyGeom = new THREE.CylinderGeometry(0, 10, 10, 4, 1);
-  this.pikeBody1 = new THREE.Mesh(pikeBodyGeom, greenMat);
+  this.pikeBody1 = new THREE.Mesh(pikeBodyGeom, BodyMat);
   this.pikeBody1.scale.set(.2, 1, 1);
   this.pikeBody1.position.z = 10;
   this.pikeBody1.position.y = 26;
@@ -276,7 +299,7 @@ Dragon = function() {
   this.head = new THREE.Group();
 
   // head face
-  this.face = makeCube(greenMat, 60, 50, 80, 0, 25, 40, 0, 0, 0);
+  this.face = makeCube(BodyMat, 60, 50, 80, 0, 25, 40, 0, 0, 0);
 
 
   // head horn
@@ -290,12 +313,12 @@ Dragon = function() {
   this.hornR.position.x = -10;
 
   // head ears
-  this.earL = makeCube(greenMat, 5, 10, 20, 32, 42, 2, 0, 0, 0);
+  this.earL = makeCube(BodyMat, 5, 10, 20, 32, 42, 2, 0, 0, 0);
   this.earL.geometry.applyMatrix(new THREE.Matrix4().makeTranslation(0, 5, -10));
   this.earL.geometry.applyMatrix(new THREE.Matrix4().makeRotationX(Math.PI / 4));
   this.earL.geometry.applyMatrix(new THREE.Matrix4().makeRotationY(-Math.PI / 4));
 
-  this.earR = makeCube(greenMat, 5, 10, 20, -32, 42, 2, 0, 0, 0);
+  this.earR = makeCube(BodyMat, 5, 10, 20, -32, 42, 2, 0, 0, 0);
   this.earR.geometry.applyMatrix(new THREE.Matrix4().makeTranslation(0, 5, -10));
   this.earR.geometry.applyMatrix(new THREE.Matrix4().makeRotationX(Math.PI / 4));
   this.earR.geometry.applyMatrix(new THREE.Matrix4().makeRotationY(Math.PI / 4));
@@ -307,7 +330,7 @@ Dragon = function() {
   this.mouth.rotation.x = 0//Math.PI / 8;
 
   // head mouth jaw
-  this.jaw = makeCube(greenMat, 30, 10, 30, 0, -5, 15, 0, 0, 0);
+  this.jaw = makeCube(BodyMat, 30, 10, 30, 0, -5, 15, 0, 0, 0);
   this.mouth.add(this.jaw);
 
   // head mouth tongue
@@ -323,12 +346,12 @@ Dragon = function() {
 
 
   // head cheek
-  this.cheekL = makeCube(lightGreenMat, 4, 20, 20, 30, 18, 55, 0, 0, 0);
+  this.cheekL = makeCube(cheekMat, 4, 20, 20, 30, 18, 55, 0, 0, 0);
   this.cheekR = this.cheekL.clone();
   this.cheekR.position.x = -this.cheekL.position.x;
 
   //head spots
-  this.spot1 = makeCube(lightGreenMat, 2, 2, 2, 20, 16, 80, 0, 0, 0);
+  this.spot1 = makeCube(cheekMat, 2, 2, 2, 20, 16, 80, 0, 0, 0);
 
   this.spot2 = this.spot1.clone();
   this.spot2.position.x = 15;
@@ -402,7 +425,7 @@ Dragon = function() {
   this.head.add(this.spot8);
   */
   // legs
-  this.legFL = makeCube(greenMat, 20, 10, 20, 20, -30, 15, 0, 0, 0);
+  this.legFL = makeCube(BodyMat, 20, 10, 20, 20, -30, 15, 0, 0, 0);
   this.legFR = this.legFL.clone();
   this.legFR.position.x = -30;
   this.legBL = this.legFL.clone();

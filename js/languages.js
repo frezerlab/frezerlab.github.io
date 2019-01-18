@@ -19,7 +19,10 @@ if(params['lang'] == null){
 }
 */
 
-var pageWidth = document.documentElement.clientWidth; //Ширина страницы (документа)
-var height=(document.body.scrollHeight > document.body.offsetHeight)?document.body.scrollHeight:document.body.offsetHeight;
+function q (){
+alert('1234');
+}
 
-alert($.browser.opera? window.innerHeight : $(window).height);
+if(window.location.hash == "#1234") {
+  q();
+}
