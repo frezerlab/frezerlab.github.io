@@ -1,5 +1,6 @@
-
-
+/*****************
+ Change version
+ *****************/
   let version = "";
 
 $(window).bind('hashchange', function() {
@@ -11,25 +12,30 @@ $(window).bind('hashchange', function() {
     desktopVer();
   }
 });
-
 function mobileVer (){
-  $('*[data-version="desktop"]').addClass('hide');
-  $('*[data-version="mobile"]').addClass('hide-on-med-and-down').removeClass('hide').removeClass('hide-on-large-only');
+  $('*[data-version="desktop"]').css('cssText', 'display: none !important');
+  $('*[data-version="mobile"]').css('cssText', 'display: block !important');
   ls.setItem('version', "M");
   Initialization();
 }
 function desktopVer (){
-  $('*[data-version="mobile"]').addClass('hide');
-  $('*[data-version="desktop"]').addClass('hide-on-med-and-down').removeClass('hide');
+  $('*[data-version="mobile"]').css('cssText', 'display: none !important');
+  $('*[data-version="desktop"]').css('cssText', 'display: block !important');
   ls.setItem('version', "D");
   Initialization();
 }
 
+/*****************
+ Change date footer
+ *****************/
+$('#date-footer').html('© '+ moment().format('Y') +' Copyright Text');
+
+
 $(document).ready(function() {
   version = ls.getItem('version') !== null? ls.getItem('version') : version;
-
   if(version === "M") mobileVer();
-
   if(version === "D") desktopVer();
+
+
 
 });

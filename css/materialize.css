@@ -2715,19 +2715,19 @@ i.right {
 }
 
 i.tiny {
-  font-size: 1rem;
+  font-size: 1rem !important;
 }
 
 i.small {
-  font-size: 2rem;
+  font-size: 2rem !important;
 }
 
 i.medium {
-  font-size: 4rem;
+  font-size: 4rem !important;
 }
 
 i.large {
-  font-size: 6rem;
+  font-size: 6rem !important;
 }
 
 img.responsive-img,
@@ -3511,7 +3511,7 @@ table span.badge {
 
 .row .col.s2 {
   width: 16.6666666667%;
-  margin-left: auto;
+  margin: 1em;
   left: auto;
   right: auto;
 }
@@ -4099,7 +4099,7 @@ table span.badge {
 @media only screen and (min-width: 1201px) {
   .row .col.xl1 {
     width: 8.3333333333%;
-    margin-left: auto;
+    margin: 0.4em;
     left: auto;
     right: auto;
   }

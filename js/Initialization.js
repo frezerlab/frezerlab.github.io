@@ -5,7 +5,9 @@ $(document).ready(function(){
 
 function Initialization(){
   //Initialization Navbar
-  $('.sidenav').sidenav();
+  $('.sidenav').sidenav({
+    draggable: true
+  });
 
   //Initialization Modals
   $('.modal').modal();
@@ -28,6 +30,9 @@ function Initialization(){
 
   //Initialization Collapsible
   $('.collapsible').collapsible();
+
+  //Initialization Tooltips
+  $('.tooltipped').tooltip();
 
 }
 

@@ -1,6 +1,8 @@
 curColor = "green";
 lastColor = "";
 ls = localStorage;
+iconSize = "small";
+icon = "check_circle";
 
 HexColor = {
   "red": "#f44336",
@@ -36,7 +38,7 @@ $('.clr-btn').click(
     if(curColor !== dataclr) {
       lastColor = curColor;
       curColor = dataclr;
-      $('*[data-color="' + lastColor + '"]').addClass("waves-effect").removeClass("pulse");
+      $('*[data-color="' + lastColor + '"]').addClass("waves-effect").removeClass("pulse").html('');
       $(this).addClass("pulse").removeClass("waves-effect");
       ls.setItem('color', curColor);
       ReplaceColor(color = curColor);
@@ -44,7 +46,7 @@ $('.clr-btn').click(
   });
 
 function ReplaceColor(color){
-  $('*[data-color="' + color + '"]').addClass("pulse").removeClass("waves-effect");
+  $('*[data-color="' + color + '"]').addClass("pulse").removeClass("waves-effect").html('<i class=\"material-icons\u0020'+iconSize+'\">'+icon+'</i>');
   $('*[data-color="color"]').addClass(color).removeClass(lastColor);
   $('*[data-color="waves-color"]').removeClass("waves-" + lastColor).addClass("waves-" + color);
   $('*[name="theme-color"]').attr('content', HexColor[color]);

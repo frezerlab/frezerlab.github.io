@@ -36,7 +36,7 @@
   <div data-version="mobile" class="hide-on-large-only">
     <nav>
       <div class="nav-wrapper bg-color-anim" data-color="color">
-        <a href="/" class="brand-logo"><div class="logo_frezerlab"><?xml version="1.0" encoding="utf-8"?>
+        <a href="/" class="brand-logo center"><div class="logo_frezerlab"><?xml version="1.0" encoding="utf-8"?>
           <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
           <svg data-color="txt-colorbg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 351 62" style="enable-background:new 0 0 351 62;" xml:space="preserve">
@@ -84,8 +84,6 @@
 	c-1.3,1.1-2.3,2.6-3.2,4.4c-0.8,1.6,0.4,3.5,2.2,3.5L167,34.6z"/>
 </svg>
         </div></a>
-        <ul id="nav-mobile" class="right">
-        </ul>
       </div>
     </nav>
 
@@ -189,12 +187,13 @@
 	c-1.3,1.1-2.3,2.6-3.2,4.4c-0.8,1.6,0.4,3.5,2.2,3.5L167,34.6z"/>
 </svg>
         </div></a>
-        <ul id="nav-mobile" class="right">
-          <li><a data-color="txt-colorbg" class="hide-on-med-and-down" href="/">Главная</a></li>
-          <li><a data-color="txt-colorbg" class="hide-on-med-and-down" href="badges.html">О компании</a></li>
-          <li><a data-color="txt-colorbg" class="hide-on-med-and-down" href="badges.html">Проекты</a></li>
-          <li><a data-color="txt-colorbg" class="hide-on-med-and-down" href="badges.html">Услуги</a></li>
-          <li><a data-color="txt-colorbg" class="hide-on-med-and-down" href="badges.html">Game Club</a></li>
+        <ul id="nav-mobile">
+          <li class="right hide-on-med-and-down"><a data-color="txt-colorbg" class="" href="badges.html">Game Club</a></li>
+          <li class="right hide-on-med-and-down"><a data-color="txt-colorbg" class="" href="badges.html">Услуги</a></li>
+          <li class="right hide-on-med-and-down"><a data-color="txt-colorbg" class="" href="badges.html">Проекты</a></li>
+          <li class="right hide-on-med-and-down"><a data-color="txt-colorbg" class="" href="badges.html">О компании</a></li>
+          <li class="right hide-on-med-and-down"><a data-color="txt-colorbg" class="" href="/">Главная</a></li>
+          <li data-target="slide-out" class="left hide-on-large-only sidenav-trigger"><i class="material-icons black-text">menu</i></li>
         </ul>
       </div>
     </nav>
@@ -229,12 +228,27 @@
   <br>
 
 
+    <ul id="slide-out" class="sidenav">
+      <li><div class="user-view">
+        <div class="background">
+          <img src="images/office.jpg">
+        </div>
+        <a href="#user"><img class="circle" src="images/yuna.jpg"></a>
+        <a href="#name"><span class="white-text name">John Doe</span></a>
+        <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+      </div></li>
+      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+      <li><a href="#!">Second Link</a></li>
+      <li><div class="divider"></div></li>
+      <li><a class="subheader">Subheader</a></li>
+      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
 
 
 
 
 
-  <div class="divider bg-color-anim container" tabindex="-1" data-color="color"></div>
+    <div class="divider bg-color-anim container" tabindex="-1" data-color="color"></div>
   <br>
   <div class="container">
   <div class="row">
@@ -289,14 +303,14 @@
       </div>
     </div>
     <div class="footer-copyright z-depth-2">
-      <div class="container" data-color="txt-colorbg">
-        © 2014 Copyright Text
+      <div id="date-footer" class="container" data-color="txt-colorbg">
       </div>
     </div>
   </footer>
 
 
   </div>
+
   <div class="nano-pane bg-color-anim lighten-3" data-color="color">
     <div class="nano-slider bg-color-anim darken-2" data-color="color"></div>
   </div>
@@ -305,7 +319,7 @@
     <!-- MISC -->
   <!-- Opens the color bar -->
   <div class="fixed-action-btn">
-    <a class="btn-floating btn-large waves-effect modal-trigger" href="#color-palette" data-color="color"><i data-color="txt-colorbg" class="material-icons">brush</i></a>
+    <a class="btn-floating btn-large waves-effect modal-trigger" href="#color-palette" data-color="color"><i data-color="txt-colorbg" class="material-icons">format_color_fill</i></a>
   </div>
   <!-- Color panel -->
   <div id="color-palette" class="modal modal-fixed-footer lighten-3 bg-color-anim" data-color="color">
@@ -314,25 +328,25 @@
       <div class="divider bg-color-anim" tabindex="-1" data-color="color"></div>
       <br>
       <div class="row">
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large red clr-btn" data-color="red"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large pink clr-btn" data-color="pink"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large purple clr-btn" data-color="purple"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large deep-purple clr-btn" data-color="deep-purple"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large indigo clr-btn" data-color="indigo"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large blue clr-btn" data-color="blue"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large light-blue clr-btn" data-color="light-blue"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large cyan clr-btn" data-color="cyan"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large teal clr-btn" data-color="teal"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large green clr-btn" data-color="green"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large light-green clr-btn" data-color="light-green"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large lime clr-btn" data-color="lime"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large yellow clr-btn" data-color="yellow"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large amber clr-btn" data-color="amber"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large orange clr-btn" data-color="orange"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large deep-orange clr-btn" data-color="deep-orange"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large brown clr-btn" data-color="brown"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large grey clr-btn" data-color="grey"></a></div>
-        <div class="col s4 m2 l2 xl1"><a class="waves-effect btn-floating btn-large blue-grey clr-btn" data-color="blue-grey"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large red clr-btn" data-color="red"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large pink clr-btn" data-color="pink"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large purple clr-btn" data-color="purple"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large deep-purple clr-btn" data-color="deep-purple"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large indigo clr-btn" data-color="indigo"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large blue clr-btn" data-color="blue"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large light-blue clr-btn" data-color="light-blue"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large cyan clr-btn" data-color="cyan"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large teal clr-btn" data-color="teal"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large green clr-btn" data-color="green"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large light-green clr-btn" data-color="light-green"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large lime clr-btn" data-color="lime"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large yellow clr-btn" data-color="yellow"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large amber clr-btn" data-color="amber"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large orange clr-btn" data-color="orange"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large deep-orange clr-btn" data-color="deep-orange"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large brown clr-btn" data-color="brown"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large grey clr-btn" data-color="grey"></a></div>
+        <div class="col s2 m2 l2 xl1"><a class="waves-effect btn-floating btn-large blue-grey clr-btn" data-color="blue-grey"></a></div>
       </div>
     </div>
     <div class="modal-footer lighten-3 bg-color-anim" data-color="color">
@@ -344,6 +358,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/materialize.js"></script>
     <script src="js/nanoScroller.js"></script>
+    <script src="js/moment.js"></script>
   <script src="js/Initialization.js"></script>
   <script src="js/SelectColor.js"></script>
   <script src="js/main.js"></script>
