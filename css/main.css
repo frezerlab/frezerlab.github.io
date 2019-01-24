@@ -22,7 +22,7 @@ body{
 }
 
 .inset-shadow{
-  box-shadow: inset 0px 3px 3px rgba(0,0,0,0.3)
+  box-shadow: inset 0 4px 10px rgba(0,0,0,0.4)
 }
 
 .bg-title-card{
@@ -59,7 +59,7 @@ body{
 .scroll-viewport > .nano-pane {
   position: absolute;
   z-index: 1;
-  width: 10px;
+  width: 0.5em;
   right: 0;
   top: 0;
   bottom: 0;

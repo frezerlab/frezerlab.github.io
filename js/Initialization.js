@@ -17,6 +17,7 @@ function Initialization(){
     fullWidth: true,
     indicators: true
   });
+ // $('.carousel').carousel();
 
   //Initialization Dropdown
   $('.dropdown-trigger').dropdown();
@@ -34,6 +35,10 @@ function Initialization(){
   //Initialization Tooltips
   $('.tooltipped').tooltip();
 
+  //Initialization Scroll bar
+  $('.scroll-viewport').nanoScroller({
+    alwaysVisible: true
+  });
 }
 
 setInterval( function(){
