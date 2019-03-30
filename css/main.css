@@ -32,9 +32,19 @@ body{
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.underline-link{
+  width: max-content;
+  width: -moz-max-content;
+}
 .underline-link:hover{
   text-decoration: underline;
 }
+
+a.adv-link label {
+  cursor: pointer;
+  position: absolute;
+}
+
 
 /*********************
     ScrollBar Style

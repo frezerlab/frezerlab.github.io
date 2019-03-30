@@ -4173,8 +4173,10 @@ $jscomp.polyfill = function (e, r, p, m) {
         this._indicator = indicator;
 
         setTimeout(function () {
+          _this24._indicator.dataset.color = 'colorbg'; /* lab */
           _this24._indicator.style.left = _this24._calcLeftPos(_this24.$activeTabLink) + 'px';
           _this24._indicator.style.right = _this24._calcRightPos(_this24.$activeTabLink) + 'px';
+
         }, 0);
       }
 

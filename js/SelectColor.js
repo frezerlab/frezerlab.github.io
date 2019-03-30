@@ -1,8 +1,6 @@
 curColor = "green";
 lastColor = "red";
 ls = localStorage;
-iconSize = "small";
-icon = "check_circle";
 
 HexColor = {
   "red":{
@@ -115,13 +113,14 @@ $('.clr-btn').click(
 function ReplaceColor(color){
   ls.setItem('color', curColor);
   ls.setItem('lastColor', lastColor);
-  $('*[data-color="' + lastColor + '"]').addClass("waves-effect").removeClass("pulse").html('');
+  $('*[data-color="' + lastColor + '"]').addClass("waves-effect").removeClass("pulse").children('i').removeClass('scale-in');
   $(this).addClass("pulse").removeClass("waves-effect");
-  $('*[data-color="' + color + '"]').addClass("pulse").removeClass("waves-effect").html('<i data-color=\"txt-colorbg\" class=\"material-icons\u0020'+iconSize+'\">'+icon+'</i>');
+  $('*[data-color="' + color + '"]').addClass("pulse").removeClass("waves-effect").children('i').addClass('scale-in');
   $('*[data-color="color"]').addClass(color).removeClass(lastColor);
   $('*[data-color="waves-color"]').removeClass("waves-" + lastColor).addClass("waves-" + color);
   $('*[name="theme-color"]').attr('content', HexColor[color].color);
   $('*[data-color="txt-colorbg"]').removeClass(HexColor[lastColor].color_text+'-text').addClass(HexColor[color].color_text+'-text');
+  $('*[data-color="colorbg"]').removeClass(HexColor[lastColor].color_text).addClass(HexColor[color].color_text);
 }
 
 

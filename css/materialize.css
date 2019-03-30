@@ -4332,6 +4332,7 @@ nav .sidenav-trigger {
   z-index: 1;
   height: 56px;
   margin: 0 18px;
+  cursor: pointer;
 }
 
 nav .sidenav-trigger i {
@@ -4529,6 +4530,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   line-height: 1.3;
+  margin-top: auto !important;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -4893,6 +4895,13 @@ small {
   bottom: 0;
   left: 0;
   max-width: 100%;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }
 
 .card .card-content {
@@ -4916,9 +4925,9 @@ small {
 
 .card .card-action {
   background-color: inherit;
-  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
   position: relative;
-  padding: 16px 24px;
+  padding: 10px 20px;
 }
 
 .card .card-action:last-child {
@@ -6142,10 +6151,7 @@ button:focus {
   background-color: #2ab7a9;
 }
 
-label {
-  font-size: 0.8rem;
-  color: #9e9e9e;
-}
+
 
 /* Text Inputs + Textarea
    ========================================================================== */

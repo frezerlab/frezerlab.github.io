@@ -39,6 +39,10 @@ function Initialization(){
   $('.scroll-viewport').nanoScroller({
     alwaysVisible: true
   });
+
+  //Initialization 'i'
+  $('i').addClass('scale-out');
+
 }
 
 setInterval( function(){

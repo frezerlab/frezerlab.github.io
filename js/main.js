@@ -1,3 +1,6 @@
+/*****************
+ Page transition
+ *****************/
 jQuery(document).ready(function(event){
   var isAnimating = false,
     newLocation = '';
@@ -66,13 +69,11 @@ jQuery(document).ready(function(event){
         $('.cd-loading-bar').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
           isAnimating = false;
           $('.cd-loading-bar').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
-
+          $('.scale-transition').removeClass('scale-out');
           Initialization();
           InitializationColor();
           ReplaceColor(color);
           date_footer();
-          $('.scale-transition').removeClass('scale-out');
-
         });
 
         if( !transitionsSupported() ) {
@@ -96,8 +97,7 @@ jQuery(document).ready(function(event){
 /*****************
  Change version
  *****************/
-  let version = "";
-
+version = "";
 $(window).bind('hashchange', function() {
   lh = window.location.hash;
   if(lh === "#mobile") {
@@ -124,22 +124,40 @@ function desktopVer (){
  Change date footer
  *****************/
 function date_footer(){
-  $('#date-footer').html('© '+ moment().format('Y') +' Copyright Text');
+  $('#date-footer').html('© '+ moment().format('Y') +' Frezer lab.');
 }
 
-
 /*****************
- Page transition
+ Open-in-new-link
  *****************/
+$('.adv-link').mouseenter(function () {
+  $(this).find('i').removeClass('scale-out');
+}).mouseleave(function () {
+  $(this).find('i').addClass('scale-out');
+});
+$('.adv-link label').click(function () {
+  location.href = $(this).parent().attr('data-href');
+});
+$('.adv-link i').click(function () {
+  window.open($(this).parent().attr('data-href'), '_blank');
+});
 
+/*************************
+
+ ************************/
+$('#slide-menu-right a').click(function () {
+  $('.sidenav').sidenav('close');
+});
 
 
 	$(document).ready(function() {
+    date_footer();
 		version = ls.getItem('version') !== null? ls.getItem('version') : version;
 		if(version === "M") mobileVer();
 		if(version === "D") desktopVer();
 
-    date_footer();
+    $('i').addClass('scale-out');
+
 
 	});
 
