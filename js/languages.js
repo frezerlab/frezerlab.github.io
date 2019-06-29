@@ -26,3 +26,15 @@ alert('1234');
 if(window.location.hash == "#1234") {
   q();
 }
+
+
+for (i = 9; i > 0; i--) {
+  $(".row").append('             <div class="col s3 m2 l2 xl2">\n' +
+    '                <div class="card transparent halfway-fab waves-effect waves-light">\n' +
+    '                  <div class="card-image"><img src="https://placehold.it/512x512"></img></div>\n' +
+    '                </div>\n' +
+    '                <div class="card-content"><label class="center truncate notranslate">Test app ' + i + '</label></div>\n' +
+    '              </div>');
+}
+
+
