@@ -20,16 +20,16 @@ if(params['lang'] == null){
 */
 
 function q (){
-alert('1234');
+alert('ru');
 }
 
-if(window.location.hash == "#1234") {
+if(window.location.hash == "#ru") {
   q();
 }
 
 
 for (i = 9; i > 0; i--) {
-  $(".row").append('             <div class="col s3 m2 l2 xl2">\n' +
+  $(".row").append('             <div class="col s3 m2 l2 xl2 scale-transition scale-out">\n' +
     '                <div class="card transparent halfway-fab waves-effect waves-light">\n' +
     '                  <div class="card-image"><img src="https://placehold.it/512x512"></img></div>\n' +
     '                </div>\n' +

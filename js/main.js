@@ -74,6 +74,10 @@ jQuery(document).ready(function(event){
           InitializationColor();
           ReplaceColor(color);
           date_footer();
+          let version = ls.getItem('version') !== null? ls.getItem('version') : version;
+          if(version === "M") mobileVer();
+          if(version === "D") desktopVer();
+
         });
 
         if( !transitionsSupported() ) {
@@ -152,7 +156,7 @@ $('#slide-menu-right a').click(function () {
 
 	$(document).ready(function() {
     date_footer();
-		version = ls.getItem('version') !== null? ls.getItem('version') : version;
+    let version = ls.getItem('version') !== null? ls.getItem('version') : version;
 		if(version === "M") mobileVer();
 		if(version === "D") desktopVer();
 
