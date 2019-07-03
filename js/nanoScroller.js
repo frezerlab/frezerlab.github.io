@@ -391,7 +391,7 @@
       this.win = $(this.options.windowContext || window);
       this.body = this.doc.find('body');
       this.$content = this.$el.children("." + this.options.contentClass);
-      this.$content.attr('tabindex', this.options.tabIndex || 0);
+     // this.$content.attr('tabindex', this.options.tabIndex || 0);
       this.content = this.$content[0];
       this.previousPosition = 0;
       if (this.options.iOSNativeScrolling && (this.el.style.WebkitOverflowScrolling != null)) {

@@ -106,3 +106,20 @@ label {
   -ms-user-select: none;
   user-select: none;
 }
+
+.modal.modal-fixed-footer .modal-header {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+}
+.modal .modal-header {
+  border-radius: 0 0 2px 2px;
+  background-color: #fafafa;
+  height: 78px;
+  width: 100%;
+  padding: 24px 24px 0 24px;
+}
+
+.modal-content .scroll-viewport .nano-content {
+  padding: 24px;
+}
