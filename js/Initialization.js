@@ -43,6 +43,13 @@ function Initialization(){
   //Initialization 'i'
   $('i').addClass('scale-out');
 
+  //Initialization Floating Action Button
+  $('.fixed-action-btn').floatingActionButton({
+    direction: 'top',
+    hoverEnabled: false
+  });
+
+  $('.modal-content > .scroll-viewport > .nano-content').css("right", -29);
 }
 
 setInterval( function(){

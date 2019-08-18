@@ -123,3 +123,10 @@ label {
 .modal-content .scroll-viewport .nano-content {
   padding: 24px;
 }
+
+.by-frezertop-micro-logo{
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  user-select: none;
+}

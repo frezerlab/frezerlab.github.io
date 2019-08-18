@@ -5,19 +5,26 @@ jQuery(document).ready(function(event){
   var isAnimating = false,
     newLocation = '';
   firstLoad = false;
+
   $('.scale-transition').removeClass('scale-out');
+  onLoadPage();
 
   //trigger smooth transition from the actual page to the new one
   $('.main').on('click', '[data-type="page-transition"]', function(event){
     event.preventDefault();
-    //detect which page has been selected
-    var newPage = $(this).attr('href');
-    $('.scale-transition').addClass('scale-out');
+
+    if(String($(this).attr('href')).indexOf('#') !== 0) {
+      //detect which page has been selected
+      var newPage = $(this).attr('href');
+
+      $('.scale-transition').addClass('scale-out');
 
 
-    //if the page is not already being animated - trigger animation
-    if( !isAnimating ) changePage(newPage, true);
-    firstLoad = true;
+      //if the page is not already being animated - trigger animation
+      if (!isAnimating) changePage(newPage, true);
+      firstLoad = true;
+    }
+
   });
 
   //detect the 'popstate' event - e.g. user clicking the back button
@@ -40,10 +47,17 @@ jQuery(document).ready(function(event){
     isAnimating = true;
     // trigger page animation
     $('body').addClass('page-is-changing');
+    $('.by-frezertop-micro-logo').html('<h6>Site Design by FrezerTop</h6>');
+    $( ".by-frezertop-micro-logo > h6" ).fadeOut(1, function () {
+      $('.by-frezertop-micro-logo > h6').fadeIn();
+    });
+
+    $('.sidenav-overlay, .drag-target').remove();
     $('.cd-loading-bar').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
       loadNewContent(url, bool);
       newLocation = url;
       $('.cd-loading-bar').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+
     });
     //if browser doesn't support CSS transitions
     if( !transitionsSupported() ) {
@@ -53,7 +67,7 @@ jQuery(document).ready(function(event){
   }
 
   function loadNewContent(url, bool) {
-    url = ('' == url) ? 'index.html' : url;
+    url = ('' === url) ? 'index.html' : url;
     var newSection = 'cd-'+url.replace('.html', '');
     var section = $('<div class="cd-main-content '+newSection+'"></div>');
 
@@ -68,6 +82,9 @@ jQuery(document).ready(function(event){
         $('body').removeClass('page-is-changing');
         $('.cd-loading-bar').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
           isAnimating = false;
+          $( ".by-frezertop-micro-logo > h6" ).fadeOut(function () {
+            $(this).remove();
+          });
           $('.cd-loading-bar').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
           $('.scale-transition').removeClass('scale-out');
           Initialization();
@@ -77,7 +94,7 @@ jQuery(document).ready(function(event){
           let version = ls.getItem('version') !== null? ls.getItem('version') : version;
           if(version === "M") mobileVer();
           if(version === "D") desktopVer();
-
+          onLoadPage();
         });
 
         if( !transitionsSupported() ) {

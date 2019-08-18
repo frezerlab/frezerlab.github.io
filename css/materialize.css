@@ -2719,7 +2719,7 @@ i.tiny {
 }
 
 i.small {
-  font-size: 2rem !important;
+  font-size: 1.7rem !important;
 }
 
 i.medium {
@@ -5184,7 +5184,7 @@ small {
   visibility: hidden;
 }
 
-.btn, .btn-large, .btn-small,
+.btn, .btn-large, .btn-small, .btn-medium,
 .btn-flat {
   border: none;
   border-radius: 2px;
@@ -5197,24 +5197,29 @@ small {
   -webkit-tap-highlight-color: transparent;
 }
 
-.btn.disabled, .disabled.btn-large, .disabled.btn-small,
+.btn.disabled, .disabled.btn-large, .disabled.btn-small, .disabled.medium,
 .btn-floating.disabled,
 .btn-large.disabled,
 .btn-small.disabled,
+.btn-medium.disabled,
 .btn-flat.disabled,
 .btn:disabled,
 .btn-large:disabled,
 .btn-small:disabled,
+.btn-medium:disabled,
 .btn-floating:disabled,
 .btn-large:disabled,
 .btn-small:disabled,
+.btn-medium:disabled,
 .btn-flat:disabled,
 .btn[disabled],
 .btn-large[disabled],
 .btn-small[disabled],
+.btn-medium[disabled],
 .btn-floating[disabled],
 .btn-large[disabled],
 .btn-small[disabled],
+.btn-medium[disabled],
 .btn-flat[disabled] {
   pointer-events: none;
   background-color: #DFDFDF !important;
@@ -5224,24 +5229,29 @@ small {
   cursor: default;
 }
 
-.btn.disabled:hover, .disabled.btn-large:hover, .disabled.btn-small:hover,
+.btn.disabled:hover, .disabled.btn-large:hover, .disabled.btn-small:hover, .disabled.btn-medium:hover,
 .btn-floating.disabled:hover,
 .btn-large.disabled:hover,
 .btn-small.disabled:hover,
+.btn-medium.disabled:hover,
 .btn-flat.disabled:hover,
 .btn:disabled:hover,
 .btn-large:disabled:hover,
 .btn-small:disabled:hover,
+.btn-medium:disabled:hover,
 .btn-floating:disabled:hover,
 .btn-large:disabled:hover,
 .btn-small:disabled:hover,
+.btn-medium:disabled:hover,
 .btn-flat:disabled:hover,
 .btn[disabled]:hover,
 .btn-large[disabled]:hover,
 .btn-small[disabled]:hover,
+.btn-medium[disabled]:hover,
 .btn-floating[disabled]:hover,
 .btn-large[disabled]:hover,
 .btn-small[disabled]:hover,
+.btn-medium[disabled]:hover,
 .btn-flat[disabled]:hover {
   background-color: #DFDFDF !important;
   color: #9F9F9F !important;
@@ -5251,6 +5261,7 @@ small {
 .btn-floating,
 .btn-large,
 .btn-small,
+.btn-medium,
 .btn-flat {
   font-size: 14px;
   outline: 0;
@@ -5260,12 +5271,13 @@ small {
 .btn-floating i,
 .btn-large i,
 .btn-small i,
+.btn-medium i,
 .btn-flat i {
   font-size: 1.3rem;
   line-height: inherit;
 }
 
-.btn, .btn-large, .btn-small {
+.btn, .btn-large, .btn-small, .btn-medium {
   text-decoration: none;
   color: #fff;
   text-align: center;
@@ -5323,6 +5335,19 @@ small {
   line-height: 32.4px;
 }
 
+.btn-floating.btn-medium {
+  width: 46px;
+  height: 46px;
+}
+
+.btn-floating.btn-medium.halfway-fab {
+  bottom: -22.2px;
+}
+
+.btn-floating.btn-medium i {
+  line-height: 46px;
+}
+
 .btn-floating.halfway-fab {
   position: absolute;
   right: 24px;
@@ -5339,7 +5364,6 @@ small {
   display: inline-block;
   text-align: center;
   color: #fff;
-  font-size: 1.6rem;
   line-height: 40px;
 }
 
@@ -5876,7 +5900,7 @@ body.keyboard-focused .dropdown-content li:focus {
 
 .modal.modal-fixed-footer .modal-content {
   position: absolute;
-  height: calc(100% - 56px - 77px);
+  height: calc(100% - 56px - 75px);
   max-height: 100%;
   width: 100%;
   overflow: hidden;
@@ -6278,9 +6302,9 @@ input[type=tel]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #26a69a;
-  -webkit-box-shadow: 0 1px 0 0 #26a69a;
-          box-shadow: 0 1px 0 0 #26a69a;
+  border-bottom: 1px solid #8d6e63 ;          /*************************/
+  -webkit-box-shadow: 0 1px 0 0 #8d6e63 ;     /*************************/
+          box-shadow: 0 1px 0 0 #8d6e63 ;     /*************************/
 }
 
 input:not([type]):focus:not([readonly]) + label,
@@ -6296,7 +6320,7 @@ input[type=tel]:not(.browser-default):focus:not([readonly]) + label,
 input[type=number]:not(.browser-default):focus:not([readonly]) + label,
 input[type=search]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #26a69a;
+  color: #8d6e63 ;                            /*************************/
 }
 
 input:not([type]):focus.valid ~ label,
@@ -6638,7 +6662,7 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
 }
 
 .input-field .prefix.active {
-  color: #26a69a;
+  color: #26a69a;                                 /*************************/
 }
 
 .input-field .prefix ~ input,
