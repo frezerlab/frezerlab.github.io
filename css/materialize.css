@@ -2616,7 +2616,7 @@ ul:not(.browser-default) > li {
 }
 
 a {
-  color: #039be5;
+  color: inherit;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -4301,9 +4301,6 @@ nav.nav-extended .nav-content {
   line-height: normal;
 }
 
-nav a {
-  color: #fff;
-}
 
 nav i,
 nav [class^="mdi-"], nav [class*="mdi-"],
@@ -4411,7 +4408,7 @@ nav ul a {
   -webkit-transition: background-color .3s;
   transition: background-color .3s;
   font-size: 1rem;
-  color: #fff;
+
   display: block;
   padding: 0 15px;
   cursor: pointer;
@@ -5674,6 +5671,22 @@ body.keyboard-focused .dropdown-content li:focus {
   transition: .3s ease-out;
 }
 
+nav .waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
 .waves-effect .waves-ripple {
   position: absolute;
   border-radius: 50%;
@@ -5918,7 +5931,8 @@ body.keyboard-focused .dropdown-content li:focus {
   bottom: -100%;
   margin: 0;
   width: 100%;
-  max-height: 45%;
+  max-height: 70%;
+  min-height: 50%;
   border-radius: 0;
   will-change: bottom, opacity;
 }
@@ -6699,30 +6713,30 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
   display: block;
   line-height: inherit;
   -webkit-transition: .3s background-color;
-  transition: .3s background-color;
+  transition: .3s background-color, .3s color;
 }
 
 .nav-wrapper .input-field input[type=search] {
   height: inherit;
-  padding-left: 4rem;
-  width: calc(100% - 4rem);
+  padding: 0 3.6rem 0 4.1rem;
+  width: calc(100% - 7.7rem);
   border: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 .input-field input[type=search]:focus:not(.browser-default) {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.27);
   border: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #444;
+  color: #000000 !important;
 }
 
 .input-field input[type=search]:focus:not(.browser-default) + label i,
 .input-field input[type=search]:focus:not(.browser-default) ~ .mdi-navigation-close,
 .input-field input[type=search]:focus:not(.browser-default) ~ .material-icons {
-  color: #444;
+  color: #000000 !important;
 }
 
 .input-field input[type=search] + .label-icon {

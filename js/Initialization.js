@@ -49,7 +49,7 @@ function Initialization(){
     hoverEnabled: false
   });
 
-  $('.modal-content > .scroll-viewport > .nano-content').css("right", -29);
+ // $('.modal-content > .scroll-viewport > .nano-content').css("right", -29);
 }
 
 setInterval( function(){

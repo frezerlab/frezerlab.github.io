@@ -682,13 +682,11 @@
       if (BROWSER_SCROLLBAR_WIDTH === 0 && isFFWithBuggyScrollbar()) {
         currentPadding = window.getComputedStyle(this.content, null).getPropertyValue('padding-right').replace(/[^0-9.]+/g, '');
         cssRule = {
-          right: -14,
-          paddingRight: +currentPadding + 14
+         // right: -14,
+      //    paddingRight: +currentPadding + 14
         };
       } else if (BROWSER_SCROLLBAR_WIDTH) {
-        cssRule = {
-          right: -BROWSER_SCROLLBAR_WIDTH
-        };
+        $(".BROWSER_SCROLLBAR_WIDTH").css('right', -BROWSER_SCROLLBAR_WIDTH);
         this.$el.addClass(options.enabledClass);
       }
       if (cssRule != null) {
@@ -786,8 +784,8 @@
         right = parseInt(this.$content.css('right'), 10);
         if (right) {
           this.$content.css({
-            right: '',
-            marginRight: right
+           //right: '',
+         //   marginRight: right
           });
         }
       }
@@ -918,7 +916,7 @@
       if (this.$el.hasClass(this.options.enabledClass)) {
         this.$el.removeClass(this.options.enabledClass);
         this.$content.css({
-          right: ''
+       //   right: ''
         });
       }
       return this;

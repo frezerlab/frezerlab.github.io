@@ -164,10 +164,24 @@ $('.adv-link i').click(function () {
 });
 
 /*************************
-
+  Close sidenav
  ************************/
 $('#slide-menu-right a').click(function () {
   $('.sidenav').sidenav('close');
+});
+
+/*************************
+  Button clear input
+ ************************/
+setInterval( function(){
+  $('.backspace-input-btn').siblings('input').val() !== ''? $('.backspace-input-btn').fadeIn(300) : $('.backspace-input-btn').fadeOut(300);
+}, 10);
+
+$('.backspace-input-btn').click(function () {
+  if($('.backspace-input-btn').css('color') !== 'rgba(0, 0, 0, 0)'){
+    $(this).siblings('input').val('').focus();
+  }
+//$(this).siblings('input').val('');
 });
 
 

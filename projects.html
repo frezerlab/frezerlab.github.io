@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/materialize.css">
   <link rel="stylesheet" href="css/PageTransition.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 
 </head>
 
@@ -23,7 +23,7 @@
 <div class="main">
   <div class="cd-index cd-main-content">
     <div  class="scroll-viewport">
-      <div class="nano-content">
+      <div class="nano-content BROWSER_SCROLLBAR_WIDTH">
         <!--[if lte IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -235,10 +235,10 @@
           <i class="material-icons small" data-color="txt-colorbg">settings</i>
         </a>
         <ul>
-          <li><a class="btn-floating btn-medium waves-effect hoverable z-depth-2 darken-2" data-color="color"><i class="material-icons small">insert_chart</i></a></li>
-          <li><a class="btn-floating btn-medium waves-effect hoverable z-depth-2 darken-2" data-color="color"><i class="material-icons small">format_quote</i></a></li>
-          <li><a class="btn-floating btn-medium waves-effect hoverable z-depth-2 darken-2 modal-trigger" data-color="color" href="#set-language"><i class="material-icons small">language</i></a></li>
-          <li><a class="btn-floating btn-medium waves-effect hoverable z-depth-2 darken-2 modal-trigger" data-color="color" href="#color-palette"><i class="material-icons small">format_color_fill</i></a></li>
+          <li><a class="btn-floating btn-medium waves-effect hoverable z-depth-2 lighten-1" data-color="color"><i class="material-icons small" data-color="txt-colorbg">insert_chart</i></a></li>
+          <li><a class="btn-floating btn-medium waves-effect hoverable z-depth-2 lighten-1" data-color="color"><i class="material-icons small" data-color="txt-colorbg">format_quote</i></a></li>
+          <li><a class="btn-floating btn-medium waves-effect hoverable z-depth-2 lighten-1 modal-trigger" data-color="color" href="#set-language"><i class="material-icons small" data-color="txt-colorbg">language</i></a></li>
+          <li><a class="btn-floating btn-medium waves-effect hoverable z-depth-2 lighten-1 modal-trigger" data-color="color" href="#color-palette"><i class="material-icons small" data-color="txt-colorbg">format_color_fill</i></a></li>
         </ul>
       </div>
 
@@ -252,7 +252,7 @@
         </div>
         <div class="modal-content">
           <div class="scroll-viewport has-scrollbar">
-            <div class="nano-content">
+            <div class="nano-content" style="right: -29px;">
               <div class="row">
                 <div class="col s3 m2 l2 xl1 center-align"><a class="waves-effect btn-floating btn-large red clr-btn" data-color="red"><i class="material-icons white-text small scale-transition scale-out">check_circle</i></a></div>
                 <div class="col s3 m2 l2 xl1 center-align"><a class="waves-effect btn-floating btn-large pink clr-btn" data-color="pink"><i class="material-icons white-text small scale-transition">check_circle</i></a></div>
@@ -285,47 +285,38 @@
         </div>
       </div>
       <!-- Languages panel -->
-      <div id="set-language" class="modal modal-fixed-footer lighten-4 bg-color-anim" data-color="color">
-        <div class="modal-header lighten-4 bg-color-anim" data-color="color">
-
-              <div class="row">
-                <div class="input-field">
-                  <i class="material-icons prefix notranslate">search</i>
-                  <input type="text" id="search-lang-input" class="autocomplete">
-                  <label for="search-lang-input">Найти языки</label>
-                </div>
-              </div>
-
-
-          <div class="divider bg-color-anim" data-color="color"></div>
-        </div>
+      <div id="set-language" class="modal bottom-sheet lighten-4 bg-color-anim" data-color="color">
         <div class="modal-content">
           <div class="scroll-viewport has-scrollbar">
             <div class="nano-content">
               <div class="row">
-                <div class="col s4 blue"><p>WW</p></div>
-                <div class="col s4 blue"><p>WW</p></div>
-                <div class="col s4 blue"><p>WW</p></div>
-                <div class="col s4 blue"><p>WW</p></div>
-                <div class="col s4 blue"><p>WW</p></div>
-                <div class="col s4 blue"><p>WW</p></div>
+                <div class="col s11">
+                  <nav>
+                    <div class="nav-wrapper notranslate lighten-2" data-color="color">
+                        <div class="input-field">
+                          <input id="search" type="search" autocomplete="off" data-color="txt-colorbg">
+                          <label class="label-icon" for="search"><i class="material-icons" data-color="txt-colorbg">search</i></label>
+                          <i class="material-icons backspace-input-btn">keyboard_backspace</i>
+                        </div>
+                    </div>
+                  </nav>
+                </div>
+                <div class="col">
+                  <nav>
+                    <div class="nav-wrapper lighten-2" data-color="color">
+                      <ul class="left">
+                        <li data-color="txt-colorbg"><a class="modal-close waves-effect waves-light">Закрыть</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
               </div>
-              <div class="row">
-                <div class="col s2 red"><p>QQ</p></div>
-                <div class="col s2 red"><p>QQ</p></div>
-                <div class="col s2 red"><p>QQ</p></div>
-                <div class="col s2 red"><p>QQ</p></div>
-                <div class="col s2 red"><p>QQ</p></div>
-                <div class="col s2 red"><p>QQ</p></div>
-              </div>
+              <div style="height: 1000px"></div>
             </div>
             <div class="nano-pane bg-color-anim lighten-3" data-color="color" style="opacity: 1; visibility: visible;">
               <div class="nano-slider bg-color-anim darken-2" data-color="color" style="height: 208px; transform: translate(0px, 0px);"></div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer lighten-4 bg-color-anim" data-color="color">
-          <a class="modal-close waves-effect btn-flat" data-color="waves-color">Закрыть</a>
         </div>
       </div>
 

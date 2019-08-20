@@ -26,7 +26,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Programs/nwjs-sdk-v0.40.1-win-x64/nw.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -46,6 +46,18 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="NodeWebKit" factoryName="NW.js" editBeforeRun="true" nameIsGenerated="true" exePath="$USER_HOME$/Desktop/Programs/nwjs-sdk-v0.40.1-win-x64/nw.exe" inputPath="$USER_HOME$/Desktop/Programs/NWjsForC2/win64/nw.exe">
+      <method v="2">
+        <option name="LaunchBrowser.Before.Run" url="http://localhost:63342/frezerlab.github.io/projects.html" />
+      </method>
+    </configuration>
+    <configuration default="true" type="NodeWebKit" factoryName="NW.js" editBeforeRun="true" inputPath="$USER_HOME$/Desktop/Programs/NWjsForC2/win64/nw.exe">
+      <method v="2">
+        <option name="LaunchBrowser.Before.Run" url="http://localhost:63342/frezerlab.github.io/projects.html" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -104,6 +116,11 @@
       <workItem from="1566033042086" duration="786000" />
       <workItem from="1566038807782" duration="168000" />
       <workItem from="1566039027393" duration="21083000" />
+      <workItem from="1566123382847" duration="2044000" />
+      <workItem from="1566142980159" duration="8001000" />
+      <workItem from="1566217916324" duration="17933000" />
+      <workItem from="1566250789158" duration="5512000" />
+      <workItem from="1566307071467" duration="3875000" />
     </task>
     <servers />
   </component>
