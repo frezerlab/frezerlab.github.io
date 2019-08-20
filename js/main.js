@@ -179,7 +179,8 @@ setInterval( function(){
 
 $('.backspace-input-btn').click(function () {
   if($('.backspace-input-btn').css('color') !== 'rgba(0, 0, 0, 0)'){
-    $(this).siblings('input').val('').focus();
+    $(this).siblings('input').val('');
+    $(this).siblings('input').focus();
   }
 });
 
