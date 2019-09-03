@@ -1,0 +1,122 @@
+{
+  "groups":[
+    {
+      "group_name": "тис18-2",
+      "schedule": {
+        "white_week": {
+          "Mon":[
+            {
+              "name": "ГОВНО",
+              "teacher": "ЦЦ",
+              "type": "",
+              "room": "",
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "name": "FFF",
+              "teacher": "1",
+              "type": "",
+              "room": "",
+              "startTime": "",
+              "endTime": ""
+            }
+          ],
+          "Tue":[
+            {
+              "name": "ОВНО",
+              "teacher": "2",
+              "type": "",
+              "room": "",
+              "startTime": "",
+              "endTime": ""
+            }
+          ],
+          "Wed":[
+            {
+              "name": "ОВНАО1",
+              "teacher": "3",
+              "type": "",
+              "room": "",
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "name": "ОВНАО2",
+              "teacher": "a",
+              "type": "",
+              "room": "",
+              "startTime": "",
+              "endTime": ""
+            },
+            {
+              "name": "Name",
+              "teacher": "Teacher",
+              "type": "Type",
+              "room": "Room",
+              "startTime": "Start Time",
+              "endTime": "End Time"
+            },
+            {
+              "name": "ВНАО",
+              "teacher": "4",
+              "type": "",
+              "room": "",
+              "startTime": "",
+              "endTime": ""
+            }
+          ],
+          "Thu":{
+
+          },
+          "Fri":{
+
+          },
+          "Sat":{
+
+          },
+          "Sun":{
+
+          }
+        },
+        "green_week":{
+          "Mon":{
+
+          },
+          "Tue":{
+
+          },
+          "Wed":{
+
+          },
+          "Thu":{
+
+          },
+          "Fri":{
+
+          },
+          "Sat":{
+
+          },
+          "Sun":{
+
+          }
+        }
+      }
+    },
+    {
+      "group_name": "тис18-1"
+    }
+  ],
+  "misc":{
+    "days_name":[
+      "Понедельник",
+      "Вторник",
+      "Среда",
+      "Четверг",
+      "Пятница",
+      "Суббота",
+      "Воскресенье"
+    ]
+  }
+}
