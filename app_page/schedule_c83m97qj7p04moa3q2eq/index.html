@@ -285,20 +285,7 @@
       vertical-align: middle;
       border-radius: 2px;
     }
-.modal {
-    display: none;
-    position: fixed;
-    left: 0;
-    right: 0;
-    background-color: #fafafa;
-    padding: 0;
-    max-height: 70% ;
-    width: 77% !important;
-    margin: auto;
-    overflow-y: auto;
-    border-radius: 2px;
-    will-change: top,opacity;
-}
+
   </style>
 
 </head>
@@ -355,7 +342,7 @@
 </div>
 
     <!-- Modal Structure -->
-    <div id="modal1" class="modal">
+    <div id="update-table" class="modal">
       <div class="modal-content">
         <table>
           <thead>
@@ -364,16 +351,16 @@
             <th>Версия</th>
             <th>Размер</th>
             <th>Дата</th>
-            <th></th>
+            <th>Ссылка</th>
           </tr>
           </thead>
           <tbody>
           <tr>
-            <td>Расписание ЛГТУ</td>
-            <td>1.4</td>
-            <td>2.5 МБ</td>
-            <td>27.10.2019</td>
-            <td><button onclick="" style="background-color: #b2ff59; color: #000000 " class="waves-effect waves-light btn">Скачать</button></td>
+            <td data-newversionparameters="name"></td>
+            <td data-newversionparameters="number"></td>
+            <td data-newversionparameters="size"></td>
+            <td data-newversionparameters="date"></td>
+            <td><a data-newversionparameters="downloadLink" href="" target="_blank" style="background-color: #e0e0e0; color: #000000 " class="waves-effect waves-light btn">Скачать</a></td>
           </tr>
           </tbody>
         </table>
@@ -397,9 +384,6 @@
 
   <!-- Firebase (Check update & echnical works) -->
   <script>
-    // Locked cause it keeps getting hacked :( and have other more pressing projects
-    // But will revisit at some point in the future.
-
     var AppConfig = {
       apiKey: "AIzaSyASaPhE_W6nu0GRCaxF5LmsLkBuMTV7U90",
       authDomain: "lstu-schedule.firebaseapp.com",
@@ -431,9 +415,16 @@
       }
 
       //Check update
-      if(!snapshot.val().tehnicalWorks & snapshot.val().verApp > 1.0){
-        M.toast({displayLength: NaN, html: 'Вышла версия ' + snapshot.val().verApp + '<button onclick=" M.Toast.dismissAll();" style="background-color: transparent; color: #eeff41" class="waves-effect waves-light btn toast-action modal-trigger" data-target="modal1">Обновить</button>'})
+      if((idGroup != null) & !snapshot.val().tehnicalWorks & snapshot.val().NewVersionParameters.number > 1.0){
+        $('[data-newversionparameters="name"]').html(snapshot.val().NewVersionParameters.name);
+        $('[data-newversionparameters="number"]').html(snapshot.val().NewVersionParameters.number);
+        $('[data-newversionparameters="size"]').html(snapshot.val().NewVersionParameters.size);
+        $('[data-newversionparameters="date"]').html(snapshot.val().NewVersionParameters.date);
+        $('[data-newversionparameters="downloadLink"]').attr("href", snapshot.val().NewVersionParameters.downloadLink);
+
+        M.toast({displayLength: NaN, html: 'Требуется обновление  <button onclick=" M.Toast.dismissAll();" style="background-color: transparent; color: #eeff41" class="waves-effect waves-light btn toast-action modal-trigger" data-target="update-table">Обновить</button>'});
       }
+
     });
 
   </script>
