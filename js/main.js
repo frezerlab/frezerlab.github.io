@@ -1,7 +1,15 @@
+let pass = prompt("Password", "");
+if(pass !== ""){
+  $("html").html("Iinvalid password");
+} else {
+  $(".block-page").remove();
+}
+
+
 /*****************
  Page transition
  *****************/
-jQuery(document).ready(function(event){
+$(document).ready(function(event){
   var isAnimating = false,
     newLocation = '';
   firstLoad = false;

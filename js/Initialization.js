@@ -13,7 +13,7 @@ function Initialization(){
   $('.modal').modal();
 
   //Initialization Carousel
-  $('.carousel.carousel-slider').carousel({
+  $('.carousel.carousel-slider.main-slider').carousel({
     fullWidth: true,
     indicators: true
   });
@@ -31,6 +31,10 @@ function Initialization(){
 
   //Initialization Collapsible
   $('.collapsible').collapsible();
+  var elem = document.querySelector('.collapsible.expandable');
+  var instance = M.Collapsible.init(elem, {
+    accordion: false
+  });
 
   //Initialization Tooltips
   $('.tooltipped').tooltip();
