@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Single Color Image</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="google-site-verification" content="N6XyvBAaj1GFvQrgeAsXBaM9NysiVcS-fdgsJtIug84">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="">
+  <link rel="apple-touch-icon" href="../../img/icons/favicon.png">
+  <link rel="shortcut icon" href="../../img/icons/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/materialize.css">
+  <link rel="stylesheet" href="../../css/PageTransition.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+
+</head>
+<body class="lighten-3" data-color="color">
+<div class="block-page"></div>
+<div  class="scroll-viewport">
+  <div class="nano-content">
+    <div class="container">
+      <div class="card-panel lighten-4 bg-color-anim z-depth-2" data-color="color">
+        <div class="row">
+          <h4 class="center">Single Color Image</h4>
+
+          <div class="col s12 m6 l7 xl8">
+            <ul class="collapsible expandable lighten-5" data-color="color">
+              <li class="active">
+                <div class="collapsible-header lighten-5" data-color="color"><i class="material-icons notranslate">create</i>Create</div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <div class="input-field col s12 m12 l7 xl7">
+                      <input value="1" min="1" max="10" id="icon_img-size" type="number" class="validate size-img">
+                      <label for="icon_img-size">Width-height image</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col s6 m6 l3 xl3">
+                      <a class="waves-effect waves-light btn create-btn darken-1 left" data-color="color">Create</a>
+                    </div>
+                    <div class="col s6 m6 l4 xl4">
+                      <a class="waves-effect waves-light btn delete-btn red darken-1 right">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header lighten-5" data-color="color"><i class="material-icons notranslate">save</i>Save</div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <div class="col s3">
+                      <a class="waves-effect waves-light btn save-sci" data-color="color">Save .sci</a>
+                    </div>
+                    <div class="col s3">
+                      <a class="waves-effect waves-light btn save-png" data-color="color">Save .png</a>
+                    </div>
+                    <div class="col s3">
+                      <a class="waves-effect waves-light btn save-jpeg" data-color="color">Save .jpeg</a>
+                    </div>
+                    <div class="col s3">
+                      <a class="waves-effect waves-light btn save-webp" data-color="color">Save .webp</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header lighten-5" data-color="color"><i class="material-icons notranslate">open_in_browser</i>Open</div>
+                <div class="collapsible-body">
+                  <form action="#">
+                    <div class="file-field input-field">
+                      <div class="btn" data-color="color">
+                        <span>File</span>
+                        <input id="file" type="file" accept=".sci, .png, .jpg, .jpeg, .webp">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate file" type="text">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col s12 m6 l5 xl4 scale-transition">
+            <div class="card-panel lighten-5" data-color="color">
+              <p>Preview</p>
+              <div class="card-image preview-box z-depth-2 col s12" style="background: url('transparent_bg.svg')">
+                <svg class="center-block canvas col s12" viewBox="0 0 140 140" width="140" height="140"></svg>
+                <canvas id="canvas" class="hide" width="1" height="1"><h6>No support HTML5</h6></canvas>
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <label class="grey-text text-darken-1 left size-pixel"></label>
+                </div>
+                <div class="row">
+                  <div class="col s1 m4 l5 xl3">
+                    <a class="waves-effect waves-light btn size-minus" data-color="color">-</a>
+                  </div>
+                  <div class="col s1 m4 l5 xl3 push-s1 push-xl1">
+                    <a class="waves-effect waves-light btn size-plus" data-color="color">+</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nano-pane bg-color-anim lighten-2" data-color="color">
+    <div class="nano-slider bg-color-anim darken-2" data-color="color"></div>
+  </div>
+</div>
+
+
+
+<script src="../../js/jquery-3.3.1.js"></script>
+<script src="../../js/materialize.js"></script>
+<script src="../../js/nanoScroller.js"></script>
+<script src="../../js/moment.js"></script>
+<script src="../../js/modernizr.js"></script>
+<script src="../../js/Initialization.js"></script>
+<script src="../../js/SelectColor.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/languages.js"></script>
+<script src="../../js/app_scripts/sci/sci.js"></script>
+
+</body>
+</html>
