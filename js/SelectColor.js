@@ -121,8 +121,7 @@ function ReplaceColor(color){
   $('*[name="theme-color"]').attr('content', HexColor[color].color);
   $('*[data-color="txt-colorbg"]').removeClass(HexColor[lastColor].color_text+'-text').addClass(HexColor[color].color_text+'-text');
   $('*[data-color="colorbg"]').removeClass(HexColor[lastColor].color_text).addClass(HexColor[color].color_text);
-
-  $('*[type="checkbox"] + span').css('--color-theme', HexColor[color].color)
+  $('*[type="checkbox"] + span').css('--color-theme', HexColor[color].color);
 }
 
 
